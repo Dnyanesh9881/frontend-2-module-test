@@ -158,10 +158,63 @@ let cards=document.querySelectorAll(".card")
 let all=document.getElementById("allRecipes");
 let veg=document.getElementById("vegButton");
 let nonVeg=document.getElementById("nonVegButton");
+let radio=document.getElementById("higherRating");
+let radio1=document.getElementById("lowerRating");
+
+let searchButton=document.getElementById("searchButton");
+
 
 all.addEventListener("click" , onClickGiveAll);
 veg.addEventListener("click" , onClickGiveVeg);
 nonVeg.addEventListener("click" , onClickGiveNonVeg);
+searchButton.addEventListener("click", onCliclSeachButton);
+
+radio.addEventListener("click" , onClickRadio);
+radio1.addEventListener("click", onClickRadio1);
+
+
+
+function onCliclSeachButton(){
+    let search=document.getElementById("search").value; 
+    search=search.toLowerCase();
+    console.log(search)
+    for(let i=0;i<cards.length;i++){
+      
+        if(search===foodArray[i].name.toLowerCase() || search===foodArray[i].type.toLowerCase()){
+
+           cards[i].classList.remove("hide");
+        }else if(search.toUpperCase()===foodArray[i].name || search.toUpperCase()===foodArray[i].type){
+            cards[i].classList.remove("hide");
+        }else{
+            cards[i].classList.add("hide");
+        }
+    
+}
+}
+ function onClickRadio(){
+    for(let i=0;i<cards.length;i++){
+        
+         if(foodArray[i].rating>=4.5){
+ 
+            cards[i].classList.remove("hide");
+         }else{
+             cards[i].classList.add("hide");
+         }
+           
+           }
+ }
+ function onClickRadio1(){
+    for(let i=0;i<cards.length;i++){
+       
+         if(foodArray[i].rating<4){
+ 
+            cards[i].classList.remove("hide");
+         }else{
+             cards[i].classList.add("hide");
+         }
+           
+           }
+ }
 
 function onClickGiveAll(){
 
@@ -170,22 +223,31 @@ function onClickGiveAll(){
     }
 }
 function onClickGiveVeg(){
+    
     for(let i=0;i<cards.length;i++){
-        cards[i].classList.add("hide");
-       }
-       for(let i=0;i<cards.length;i++){
-        if(cards[i].type==='veg'){
+       
+        if(foodArray[i].type!=="veg"){
+
+           cards[i].classList.add("hide");
+        }else{
             cards[i].classList.remove("hide");
         }
-       }
+          
+          }
 }
 function onClickGiveNonVeg(){
+    
     for(let i=0;i<cards.length;i++){
+       
+     if(foodArray[i].type!=="non-veg"){
         cards[i].classList.add("hide");
+     }else{
+        cards[i].classList.remove("hide");
+    } 
        }
-       for(let i=0;i<cards.length;i++){
-        if(cards[i].type==='non-veg'){
-            cards[i].classList.remove("hide");
-        }
-       }
+    //    for(let i=0;i<cards.length;i++){
+    //     if(cards[i].type==='non-veg'){
+    //         cards[i].classList.remove("hide");
+    //     }
+    //    }
 }
