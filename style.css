@@ -73,11 +73,12 @@
   flex-grow: 1;
   padding: 0.5rem;
 }
-.search-bar > span {
+#searchButton {
   background-color: #509e2f;
   width: 3rem;
   text-align: center;
   padding: 10px;
+  border: none;
 }
 main {
   padding-inline: 3rem;
@@ -101,6 +102,9 @@ h2 {
   align-items: center;
   justify-content: space-between;
   border: none;
+}
+#allRecipes:hover,#vegButton:hover,#nonVegButton:hover{
+    background-color: #509e2f;
 }
 #allRecipes {
   background-color: #eaaa00;
@@ -145,6 +149,7 @@ p,h3{
   border-radius: 10px;
   box-shadow: 2px 2px 5px gray;
 }
+.card
 .type{
   
   margin: 0px;
@@ -189,10 +194,11 @@ p,h3{
   height: 14;
 }
 .my-footer {
-  padding: 3rem;
+  padding-inline: 3rem;
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+  margin-top: 4rem;
 }
 li {
   list-style-type: none;
@@ -216,6 +222,24 @@ li {
   background-color: #509e2f;
   border: none;
   border-radius: 10px;
+}
+.social-icons{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+   
+    
+}
+.social-icons>div{
+    border-radius: 15px;
+    overflow: hidden;
+}
+.social-icons>div:hover{
+   box-shadow: 2px 2px 5px gray;
+   background-color: #dc582a;
 }
 @media screen and (max-width: 500px) {
   * {
@@ -254,7 +278,7 @@ li {
 
   .main-image-info {
     position: absolute;
-    bottom: 7rem;
+    bottom: 5rem;
     left: 2rem;
     width: 60%;
     text-align: start;
@@ -296,4 +320,19 @@ li {
     display: flex;
     gap:2rem;
   }
+}
+
+@media screen and (max-width: 390px){
+    
+
+    .card{
+        width:300px;
+    }
+    .main-image-info{
+        position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+    width: 60%;
+    text-align: start;
+    }
 }
