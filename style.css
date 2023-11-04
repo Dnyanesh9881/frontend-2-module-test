@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=DM+Sans:opsz@9..40&family=Inter+Tight&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.img1 {
+  content: url(./assets/main-image.svg);
+}
+.my-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 4rem;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+.nav-links {
+  /* text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+*/
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  align-items: center;
+}
+.nav-links > a {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+.nav-links > a:hover {
+  color: #509e2f;
+}
+.main-image {
+  text-align: center;
+  margin-top: 2.5rem;
+  position: relative;
+}
+.main-image > img {
+  width: 95vw;
+}
+.main-image-info {
+  position: absolute;
+  bottom: 5.5rem;
+  left: 7rem;
+  width: 40%;
+  text-align: start;
+}
+.main-image-info > h1 {
+  font-size: 55px;
+  font-weight: 590;
+  color: white;
+}
+.main-image-info > p {
+  font-size: 24px;
+  font-weight: 500;
+}
+.main-image-info > p:nth-child(1) {
+  color: #dc582a;
+}
+.main-image-info > p:nth-child(3) {
+  color: #ffffff;
+}
+.search-bar {
+  display: flex;
+  padding-inline: 3rem;
+}
+.search-bar > input {
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+.search-bar > span {
+  background-color: #509e2f;
+  width: 3rem;
+  text-align: center;
+  padding: 10px;
+}
+main {
+  padding-inline: 3rem;
+}
+h2 {
+  font-weight: 500;
+  margin-bottom: 1.3rem;
+  margin-top: 1.3rem;
+  padding-inline: 3rem;
+}
+.buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.btn {
+  display: flex;
+  padding: 1.3rem;
+  border-radius: 10px;
+  min-width: 15rem;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+}
+#allRecipes {
+  background-color: #eaaa00;
+}
+#vegButton {
+  background-color: #c4d600;
+}
+#nonVegButton {
+  background-color: #dc582a;
+}
+p,h3{
+    margin: 0;
+}
+.ratingItems>h2{
+   padding-inline:0;
+
+}
+.ratingItems{
+    min-width:280px !important ;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ratingItems>P{
+    font-size: 18px;
+    font-weight: 600;
+}
+.allCards{
+    display: flex;
+    margin-top: 3rem;
+   justify-content: space-between;
+}
+.allFoodCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.card {
+  margin-top: 20px;
+  width: 260px;
+  padding: 0.6rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
+}
+.type{
+  
+  margin: 0px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #adadad;
+  padding: 0.3rem;
+}
+.name{
+    font-size: 20px;
+}
+.name-rating{
+    width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.time{
+   
+    font-size: 20px;
+    color: #dc582a;
+}
+.star{
+    font-size: 14px;
+}
+.like , .chat{
+    font-size:18px !important;
+}
+.card p>span{
+    font-size: 14px;
+}
+.card > img {
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+}
+.hide {
+  display: none;
+}
+.ratingItems {
+  width: 16rem;
+  height: 14;
+}
+.my-footer {
+  padding: 3rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+li {
+  list-style-type: none;
+}
+.startFooter {
+  width: 30%;
+}
+.lastFooter {
+  width: 35%;
+}
+.subscription {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.subscription > input {
+  padding: 0.4rem;
+}
+.subscription > button {
+  padding: 0.4rem;
+  background-color: #509e2f;
+  border: none;
+  border-radius: 10px;
+}
+@media screen and (max-width: 500px) {
+  * {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .nav-links,
+  .middleFooter,
+  .lastFooter
+ {
+    display: none;
+  }
+  .buttons {
+    overflow: scroll;
+  }
+  .startFooter {
+    width: 100%;
+  }
+  main,
+  .my-footer,
+  .search-bar,
+  h2 {
+    padding-inline: 0.6rem;
+  }
+  .buttons,
+  h2 {
+    margin-top: 1rem;
+  }
+  .img1 {
+    content: url(./assets/Rectangle\ 19.svg);
+  }
+  .my-navbar {
+    padding-left: 1rem;
+  }
+
+  .main-image-info {
+    position: absolute;
+    bottom: 7rem;
+    left: 2rem;
+    width: 60%;
+    text-align: start;
+  }
+  .main-image-info > h1 {
+    font-size: 25px;
+    font-weight: 590;
+    color: white;
+  }
+  .main-image-info > p,
+  .ratingItems > p {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .main-image {
+    margin-top: 1rem;
+  }
+  .ratingItems {
+    margin-top: 1rem;
+    gap: 1rem;
+    width: 100%;
+  }
+  .allCards{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .card{
+    width: 200px;
+  }
+  .allFoodCards{
+    display: flex;
+    justify-content: space-between;
+  }
+  h2{
+    margin-top: 0;
+  }
+  .radio-input{
+    display: flex;
+    gap:2rem;
+  }
+}
