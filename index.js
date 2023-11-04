@@ -194,7 +194,7 @@ function onCliclSeachButton(){
  function onClickRadio(){
     for(let i=0;i<cards.length;i++){
         
-         if(foodArray[i].rating>=4.5){
+         if(foodArray[i].rating>=4){
  
             cards[i].classList.remove("hide");
          }else{
