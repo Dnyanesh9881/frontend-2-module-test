@@ -142,9 +142,9 @@ for(let i=0;i<foodArray.length;i++){
     </div>
     <div class="d-flex justify-content-between align-items-center mt-2">
        <h3 class="time">${foodArray[i].time}</h3>
-       <P><span class="material-symbols-outlined isLike">
+       <P><button class="material-symbols-outlined isLike" onclick="onClickLike(this)">
            favorite
-           </span> <span class="material-symbols-outlined chat">
+           </button> <span class="material-symbols-outlined chat">
                chat_bubble
                </span></P>
     </div>`
@@ -160,6 +160,8 @@ let veg=document.getElementById("vegButton");
 let nonVeg=document.getElementById("nonVegButton");
 let radio=document.getElementById("higherRating");
 let radio1=document.getElementById("lowerRating");
+let isLike=document.querySelectorAll(".isLike");
+
 
 let searchButton=document.getElementById("searchButton");
 
@@ -171,13 +173,22 @@ searchButton.addEventListener("click", onCliclSeachButton);
 
 radio.addEventListener("click" , onClickRadio);
 radio1.addEventListener("click", onClickRadio1);
+isLike.addEventListener("click", onClickLike);
 
 
 
+function onClickLike(element){
+    
+    if(element.classList.contains("colorB")){
+        element.classList.remove("colorB");
+    }else{
+        element.classList.add("colorB");
+    }
+}
 function onCliclSeachButton(){
     let search=document.getElementById("search").value; 
     search=search.toLowerCase();
-    console.log(search)
+   
     for(let i=0;i<cards.length;i++){
       
         if(search===foodArray[i].name.toLowerCase() || search===foodArray[i].type.toLowerCase()){
@@ -251,3 +262,5 @@ function onClickGiveNonVeg(){
     //     }
     //    }
 }
+
+ 

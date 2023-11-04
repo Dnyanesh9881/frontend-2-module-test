@@ -23,8 +23,7 @@
   font-weight: 500;
 */
   display: flex;
-  justify-content: space-between;
-  width: 25%;
+  gap:2rem;
   align-items: center;
 }
 .nav-links > a {
@@ -175,12 +174,17 @@ p,h3{
 .star{
     font-size: 14px;
 }
-.isLike , .chat{
+ .chat{
     font-size:18px !important;
     cursor: pointer;
 }
-.isLike:{
-   
+.isLike{
+   font-size: 18px;
+   border: none;
+background: transparent;
+}
+.colorB{
+  color: #dc582a;
 }
 .card p>span{
     font-size: 14px;
@@ -258,11 +262,15 @@ li {
       display: none;
     }
   }
-  .nav-links,
+  
   .middleFooter,
   .lastFooter
  {
     display: none;
+  }
+  .nav-links{
+    display: flex;
+    gap:0.8rem;
   }
   .buttons {
     overflow: scroll;
@@ -285,6 +293,7 @@ li {
   }
   .my-navbar {
     padding-left: 1rem;
+    padding-right:1rem ;
   }
 
   .main-image-info {
@@ -330,6 +339,9 @@ li {
   .radio-input{
     display: flex;
     gap:2rem;
+  }
+  .social-icons{
+    margin-top: 2rem;
   }
 }
 
