@@ -175,8 +175,12 @@ p,h3{
 .star{
     font-size: 14px;
 }
-.like , .chat{
+.isLike , .chat{
     font-size:18px !important;
+    cursor: pointer;
+}
+.isLike:{
+
 }
 .card p>span{
     font-size: 14px;
@@ -209,6 +213,10 @@ li {
 .lastFooter {
   width: 35%;
 }
+.card:hover{
+    z-index: 100;
+    transform: scale(1.1,1.1);
+}
 .subscription {
   display: flex;
   justify-content: space-between;
@@ -216,6 +224,9 @@ li {
 }
 .subscription > input {
   padding: 0.4rem;
+}
+.middleFooter>ul>li:hover{
+    color: #509e2f;
 }
 .subscription > button {
   padding: 0.4rem;
